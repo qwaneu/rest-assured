@@ -1,18 +1,5 @@
 var request = require('request');
 
-function errorHandlingRequest(requestBody, done, fn) {
-  request(requestBody, function(error, response, body) {
-    expect(error).toBe(null);
-    //fn.call(response,body);
-    done();
-  });
-}
-
-/*
- *
- * jsverify. Methods: 'POST', 'PUT, 'DELETE', 'GET'. objects: random json, except for get
- */
-
 describe('stub server', function() {
   var server = 'http://localhost:3002/rest-assured';
   var makeStub = server + '/stub'; 
@@ -26,8 +13,9 @@ describe('stub server', function() {
 
     ]};
 
-    errorHandlingRequest(requestBody, done, function(request, body) {
+    request(requestBody, function(error, response, body) {
       expect(response.statusCode).toBe(200); //find the code in the response in a test endpoints: letters, numbers, dashes. Statuses 0-999
+      done();
     });
   });
 
@@ -36,10 +24,11 @@ describe('stub server', function() {
    * jsverify. Methods: 'POST', 'PUT, 'DELETE', 'GET'. objects: random json, except for get
    */
 
-  it('responds on /whatever ', function(done) {
-    var whatever = 'http://localhost:3002/whatever';
+  it('Responds with 404 NOT FOUND when stub undefined', function(done) {
+     var whatever = 'http://localhost:3002/whatever';
     requestBody = {url: whatever, method: 'PUT', json: {}};
-    errorHandlingRequest(requestBody, done, function(response, body) {
+    request(requestBody, function(error, response, body) {
+      expect(response.statusCode).toEqual(404);
       done();
     });
   });
