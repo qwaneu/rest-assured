@@ -20,6 +20,7 @@
     "url": "https://github.com/qwaneu/rest-assured/issues"
   },
   "homepage": "https://github.com/qwaneu/rest-assured#readme",
+  "bin" : "./bin/rest-assured",
   "scripts": {
     "build": "tsc",
     "tsc-version": "tsc --version",
