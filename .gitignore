@@ -29,3 +29,7 @@ node_modules
 # Typescript
 # https://github.com/Microsoft/TypeScript/wiki/Typings-for-npm-packages
 typings
+
+spec/*.d.ts
+spec/*.map
+src/*.map

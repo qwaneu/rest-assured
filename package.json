@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "HTTP stubbing library, to develop front-ends test-first.",
   "main": "src/rest-assured.js",
+  "typings": "./client/RestStubBuilder.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/qwaneu/rest-assured.git"
@@ -21,6 +22,7 @@
   "homepage": "https://github.com/qwaneu/rest-assured#readme",
   "scripts": {
     "build": "tsc",
+    "tsc-version": "tsc --version",
     "watch-compile": "tsc --watch",
     "clean-install": "npm run clean && npm install",
     "clean-start": "npm run clean && npm start",
