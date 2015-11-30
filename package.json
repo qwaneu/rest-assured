@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/qwaneu/rest-assured#readme",
   "scripts": {
+    "build": "tsc",
+    "watch-compile": "tsc --watch",
     "clean-install": "npm run clean && npm install",
     "clean-start": "npm run clean && npm start",
     "docs": "typedoc  --options typedoc.json  src/**/*.ts",

@@ -19,11 +19,6 @@ describe('stub server', function() {
     });
   });
 
-  /*
-   *
-   * jsverify. Methods: 'POST', 'PUT, 'DELETE', 'GET'. objects: random json, except for get
-   */
-
   it('Responds with 404 NOT FOUND when stub undefined', function(done) {
      var whatever = 'http://localhost:3002/whatever';
     requestBody = {url: whatever, method: 'PUT', json: {}};
