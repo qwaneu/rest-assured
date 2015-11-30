@@ -11,7 +11,7 @@ has not been published to npm yet.
 
 `git clone git@github.com:qwaneu/rest-assured.git`
 
-# From npm
+## From npm
 
 Rest-assured is only for your development, so we recommend:
 
@@ -27,8 +27,10 @@ When you install from source: `npm start`
 When you installed from npm: Add this line under `scripts` in
 `package.json`:
 
+```
   "scripts": {
     "rest-assured": "rest-assured"
   },
+```
 
 `npm run rest-assured` should show a running server on port 3002.
